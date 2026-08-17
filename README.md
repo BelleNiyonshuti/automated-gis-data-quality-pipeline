@@ -72,3 +72,11 @@ tests/
 
 outputs/
 
+## Setup
+
+The project uses a Python virtual environment and a `requirements.txt` file to manage dependencies.
+
+## License
+
+To be determined.
+
