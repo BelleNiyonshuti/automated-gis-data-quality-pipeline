@@ -6,7 +6,14 @@
     "geometry_nulls": 0,
     "invalid_geometries": 0,
     "duplicate_rows": 0,
+    "duplicate_ids": 0,
     "null_attributes": 0,
     "crs": "EPSG:4326",
+    "crs_valid": true,
+    "geometry_types": [
+        "Point"
+    ],
+    "unexpected_geometry_types": [],
+    "geometry_types_valid": true,
     "quality_score": 100.0
 }
