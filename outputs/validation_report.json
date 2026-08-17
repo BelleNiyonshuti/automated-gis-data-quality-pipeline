@@ -1,0 +1,12 @@
+{
+    "file": "data\\raw\\sample_points.gpkg",
+    "status": "PASS",
+    "features": 3,
+    "columns": 2,
+    "geometry_nulls": 0,
+    "invalid_geometries": 0,
+    "duplicate_rows": 0,
+    "null_attributes": 0,
+    "crs": "EPSG:4326",
+    "quality_score": 100.0
+}
