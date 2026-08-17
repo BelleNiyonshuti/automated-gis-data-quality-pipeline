@@ -1,27 +1,37 @@
+import argparse
 import json
 from pathlib import Path
 
 import pandas as pd
 
-from validate_data import validate_vector_file
-
-
-DATASET = "data/raw/sample_points.gpkg"
-OUTPUT_DIR = Path("outputs")
+try:
+    from .validate_data import validate_vector_file
+except ImportError:
+    from validate_data import validate_vector_file
 
 
 def main():
-    OUTPUT_DIR.mkdir(exist_ok=True)
+    parser = argparse.ArgumentParser(
+        description="Run GIS data-quality validation."
+    )
+    parser.add_argument(
+        "input_file",
+        help="Path to the vector dataset to validate.",
+    )
 
-    result = validate_vector_file(DATASET)
+    args = parser.parse_args()
 
-    # JSON report
-    json_path = OUTPUT_DIR / "validation_report.json"
-    with json_path.open("w", encoding="utf-8") as file:
+    result = validate_vector_file(args.input_file)
+
+    output_dir = Path("outputs")
+    output_dir.mkdir(exist_ok=True)
+
+    json_path = output_dir / "validation_report.json"
+    csv_path = output_dir / "validation_report.csv"
+
+    with open(json_path, "w", encoding="utf-8") as file:
         json.dump(result, file, indent=4)
 
-    # CSV report
-    csv_path = OUTPUT_DIR / "validation_report.csv"
     pd.DataFrame([result]).to_csv(csv_path, index=False)
 
     print(f"Validation completed: {result['status']}")

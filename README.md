@@ -1,82 +1,37 @@
-\# Automated GIS Data Quality Pipeline
-
-
+# Automated GIS Data Quality Pipeline
 
 A reproducible GIS data quality and validation pipeline using Python, GeoPandas, QGIS, and spatial data.
 
-
-
-\## Project Status
-
-
+## Project Status
 
 🚧 Initial setup
 
+## Objectives
 
+- Validate and clean spatial datasets
+- Detect common GIS data quality issues
+- Automate repetitive data-quality checks
+- Produce clear validation reports
+- Integrate Python workflows with QGIS
+- Build a reproducible and documented GIS workflow
 
-\## Objectives
+## Technologies
 
+- Python
+- GeoPandas
+- Pandas
+- QGIS
+- Git
+- GitHub
 
-
-\- Validate and clean spatial datasets
-
-\- Detect common GIS data quality issues
-
-\- Automate repetitive data-quality checks
-
-\- Produce clear validation reports
-
-\- Integrate Python workflows with QGIS
-
-\- Build a reproducible and documented GIS workflow
-
-
-
-\## Technologies
-
-
-
-\- Python
-
-\- GeoPandas
-
-\- Pandas
-
-\- QGIS
-
-\- Git
-
-\- GitHub
-
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
-
 data/
-
 ├── raw/
-
 └── processed/
 
-
-
 docs/
-
 src/
-
 tests/
-
 outputs/
-
-## Setup
-
-The project uses a Python virtual environment and a `requirements.txt` file to manage dependencies.
-
-## License
-
-To be determined.
-
