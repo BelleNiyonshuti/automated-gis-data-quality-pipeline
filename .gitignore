@@ -4,3 +4,5 @@ __pycache__/
 .env 
 .qgis/ 
 *.log 
+outputs/batch_validation_report.csv
+outputs/test_batch_validation_report.csv
